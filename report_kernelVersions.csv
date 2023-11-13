@@ -1,0 +1,4 @@
+Server name,Kernel version
+k8s-master,6.2.0-34-generic
+centos9,5.14.0-289.el9.x86_64
+centos8-server,4.18.0-240.22.1.el8_3.x86_64

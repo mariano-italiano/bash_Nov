@@ -1,0 +1,6 @@
+cp: nie można otworzyć '/usr/bin/chfn' do czytania: Brak dostępu
+cp: nie można otworzyć '/usr/bin/chsh' do czytania: Brak dostępu
+cp: nie można otworzyć '/usr/bin/locate' do czytania: Brak dostępu
+cp: nie można otworzyć '/usr/bin/sudo' do czytania: Brak dostępu
+cp: nie można otworzyć '/usr/bin/sudoedit' do czytania: Brak dostępu
+cp: nie można otworzyć '/usr/bin/sudoreplay' do czytania: Brak dostępu
