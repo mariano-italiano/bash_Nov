@@ -1,0 +1,275 @@
+ls -la `which sh`
+man ulimit
+which prel
+which perl
+vi test_skrypt
+perl test_skrypt
+bash test_skrypt
+vi test_skrypt 
+ls -la
+mv test_skrypt test_skrypt.sh
+chmod +x test_skrypt.sh
+./test
+./test_skrypt.sh 
+perl test_skrypt.sh 
+vi test_skrypt.sh 
+sudo dnf install perl
+perl test_skrypt.sh 
+vi test_skrypt.sh 
+perl test_skrypt.sh 
+vi test_skrypt.sh 
+perl test_skrypt.sh 
+vi test_skrypt.sh 
+perl test_skrypt.sh 
+vi test_skrypt.sh 
+perl test_skrypt.sh 
+vi test_skrypt.sh 
+perl test_skrypt.sh 
+vi test_skrypt.sh 
+perl test_skrypt.sh 
+bash test_skrypt.sh
+echo $PATH
+echo "test"
+cd /tmp
+cd
+which cd
+cp -rp /usr/bin/cd /tmp
+/tmp/cd /home
+/tmp/cd /tmp
+cp -rp /usr/bin/cd /tmp/changeDir
+ls -la /tmp/changeDir
+/tmp/changeDir /tmp
+which ls
+cp -rp /usr/bin/ls /usr/bin/listFiles
+sudo cp -rp /usr/bin/ls /usr/bin/listFiles
+listFiles /tmp
+ls /tmp
+listFiles /tmp --color=auto
+mv /usr/bin/listFiles /tmp/
+sudo mv /usr/bin/listFiles /tmp/
+listFiles /tmp --color=auto
+env
+echo $USER
+echo "Uzytkownik $USER"
+echo 'Uzytkownik $USER'
+echo "Uzytkownik \$USER"
+[ ]               [[ ]]
+echo "Uzytkownik \$USER"
+echo $?
+echo "Uzytkownik \$USER" | grep USER
+ls -la
+rm -rf backup backup.sh copy.log drzewo.sh 
+rm -rf test proj1 plik.txt nowy*
+ls -la
+rm moj_log-1.log log.log logfile.log linux katalogi.sh  Foto.jpg errors.log -rf
+ls -la
+rn test.sh
+rm test.sh
+git clone https://github.com/mariano-italiano/bash_Nov.git
+git config --global credential.helper store
+cd bash_Nov/
+ls -la
+vi hello_world.sh
+chmod +x hello_world.sh
+./hello_world.sh 
+ls -la /usr/bin/
+vi backup.sh
+chmod +x backup.sh
+./backup.sh 
+cd 
+cd backup/
+ls -la
+cd ../bash_Nov/
+ls -la
+./backup.sh 
+echo $?
+vi backup.sh
+./backup.sh 
+echo $?
+vi backup.sh
+./backup.sh 
+./backup.sh arg1 arg2
+vi backup.sh 
+./backup.sh arg1 arg2
+vi hello_world.sh 
+cp -rp hello_world.sh hello_user.sh
+vi hello_user.sh
+./hello_user.sh ADAM
+./hello_user.sh ADAM MARYSIA
+cd .
+cd
+ls -la
+ls -la > wyjscie.std
+less wyjscie.std 
+ls -la /tmp > wyjscie.std
+less wyjscie.std 
+ls -la >> wyjscie.std
+less wyjscie.std
+sort < ls 
+sort < rpm -qa
+rpm -qa > rpms
+less rpms
+sort < rpms 
+sort < rpms > sorted_rpmx
+less sorted_rpmx 
+cd bash_Nov/
+./backup.sh 
+sort 0< rpms 
+cd 
+sort 0< rpms 
+sort 0< rpms 1> sorted.txt
+ls 
+ls -la
+ls -la | head -n2
+ls -la | tail -n5
+cd bash_Nov/
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+rm backup.
+rm backup.log 
+./backup.sh 
+less ~/backup.log
+cat /home/student/rpms 
+cat /home/student/rpms | grep -i bash
+grep bash /home/student/rpms
+cat /var/log/messages
+sudo cat /var/log/messages
+ls -lha /var/log/messages
+ZMIENNA1="moja zmianna 1"
+ZMIENNA2=5
+ZMIENNA3="moja zmienna na serwerze $HOSTNAME"
+echo $ZMIENNA1
+echo $ZMIENNA2
+echo $ZMIENNA3
+vi backup.sh 
+./backup.sh 
+echo $LOGDIR
+vi update_logfile.sh
+chmod +x update_logfile.sh
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi update_logfile.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+NUMBERS=(1 2 3 cztery 5 szesc siedem "to jest osiem")
+echo $NUMBERS 
+echo ${NUMBERS[@]} 
+echo ${NUMBERS[6]} 
+echo ${NUMBERS[*]} 
+echo ${#NUMBERS[@]} 
+echo ${!NUMBERS[@]} 
+NUMBERS +=(9)
+NUMBERS+=(9)
+echo ${#NUMBERS[@]} 
+echo ${NUMBERS[@]} 
+echo ${NUMBERS[@]:2:4} 
+echo ${NUMBERS[@]:2} 
+echo ${NUMBERS[@]:8} 
+ALFABET=(a b c {d-l})
+echo ${ALFABET[@]} 
+ALFABET=(a b c {d..l})
+echo ${ALFABET[@]} 
+ALFABET=({a..z} {1 10})
+echo ${ALFABET[@]} 
+ALFABET=({a..z} {1..10})
+echo ${ALFABET[@]} 
+ALFABET=({a..z} {1..10} "inny element" elemOstatni)
+echo ${ALFABET[@]} 
+unset ALFABET 
+echo ${ALFABET[@]} 
+ALFABET=({a..z} {1..10} "inny element" elemOstatni)
+unset ALFABET[4] 
+echo ${ALFABET[@]} 
+vi cwiczenie1.sh
+chmod +x cwiczenie1.sh
+./cwiczenie1.sh 
+./cwiczenie1.sh MARCIN 18+
+./cwiczenie1.sh MARCIN 18+ cos
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+date
+man date
+date +"%x"
+date +"%r"
+date +"%Z"
+date +"%m%d%y"
+date +"%m%d%Y"
+DATE1=`date +"%m%d%Y"`
+DATE2=$(date +"%m%d%Y")
+echo DATE1
+echo $DATE1
+echo $DATE2
+vi backup.sh 
+./backup.sh 
+ls -la /home/student/
+vi backup.sh 
+date +"%H%M"
+date +"%H%M%S"
+vi backup.sh 
+./backup.sh 
+ls -la /home/student/
+vi backup.sh 
+vi heredoc.sh
+chmod +x heredoc.sh 
+./heredoc.sh 
+ls -la
+cat Plik*
+cat <<< "Witaj! ${USER}"
+cat > herestring <<< "Witaj! ${USER}"
+cat herestring 
+cat > herestring <<< "Witaj! $USER"
+cat herestring 
+echo
+echo "tekst"
+man echo
+podaj liczbe: 
+echo -n "podaj liczbe"
+man echo
+read
+echo $REPLY
+read
+echo $REPLY
+read -p "Podaj liczbe1:" liczba1
+read -p "Podaj liczbe2:" liczba2
+echo $REPLY
+echo $liczba1
+echo $liczba2
+vi backup.sh 
+./backup.sh 
+less /tmp/backup_20231113-125518.log
+./backup.sh 
+vi backup.sh 
+vi cwiczenie2.sh 
+chmod +x cwiczenie2.sh
+./cwiczenie2.sh 
+vi cwiczenie2.sh 
+cd /tmp
+git clone https://github.com/mariano-italiano/bash_Sep.git
+rm bash_Sep/
+rm bash_Sep/ -rf
+git clone https://github.com/marcin-kujawski/linux.git
+git clone https://github.com/mariano-italiano/bash_Sep.git
+cd bash_Sep/
+ls -la *
+ls
+cd 
+cd bash_Nov/
+cp -rp /tmp/bash_Sep/r01-podstawy-bash/ .
+ls -la
+cp -rp /tmp/bash_Sep/r02-deklarowanie-zmiennych/ .
+cp -rp /tmp/bash_Sep/r03-heredoc/ .
+git status
+git add .
+git commit -m "Adding day1 content"
+git push
+git status
+history
+history | awk '$1 > 209' | cut -c 8- 
+history | awk '$1 > 209' | cut -c 8- > day1-history.txt
