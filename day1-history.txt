@@ -273,3 +273,158 @@ git status
 history
 history | awk '$1 > 209' | cut -c 8- 
 history | awk '$1 > 209' | cut -c 8- > day1-history.txt
+git add .
+git commit -m "Adding day1 content"
+git config --global user.email "markuj5@gmail.com"
+git commit -m "Adding day1 content"
+git add .
+git status
+git push
+echo $VAR1
+VAR1=${USER:-moj_user1}
+echo $VAR1
+VAR1=${USER4:-moj_user1}
+echo $VAR1
+vi backup.sh 
+./backup.sh 
+less /tmp//mybackupfile.log
+ls -la /tmp
+find /tmp -mtime 3 -type f 
+sudo find /tmp -mtime 3 -type f 
+man find
+find /tmp -newermt 'Nov 13 13:53' -type f 
+ls -la /usr/bin/ | wc -l
+find /tmp -newermt 'Nov 13 13:53' -type f | wc -l
+find /tmp -newermt 'Nov 13 13:53' -type f -exec rm {} \;
+ls -la /tmp
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/bakcup2
+less /home/student/myfile.log
+ls -la
+vi backup.sh 
+ls -la ../
+less /home/student/myfile.log
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/* -d /home/student/bakcup2
+less /home/student/myfile.log
+ls -la ../bakcup2/
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/bakcup2
+ls -la ../bakcup2/
+ls -la ../bakcup2/tmp/
+less /home/student/myfile.log
+ls -la /tmp
+cd -h
+ls -h
+ls --help
+echo -e "\033[31mERROR"
+echo -e "\033[32mERROR\033[0m"
+vi backup
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup3
+vi backup.sh 
+vi lab1.sh
+ssh-keygen 
+ssh-copy-id student@centos8-server
+ssh 'student@centos8-server'
+ssh-copy-id student@192.168.1.100
+ssh 'student@192.168.1.100'
+ssh-copy-id student@centos9
+ssh student@centos9
+chmod +x lab1.sh 
+./lab1.sh -s 192.168.1.100
+./lab1.sh -s centos8-server
+vi lab1.sh 
+./lab1.sh -s centos8-server
+./lab1.sh -s 192.168.1.100
+for i in "192.168.1.100" "centos9" "centos8-server" ; do ./lab1.sh -s $i; done
+vi lab1.sh 
+echo "Server name,Kernel version"; for i in "192.168.1.100" "centos9" "centos8-server" ; do ./lab1.sh -s $i; done
+vi lab1.sh 
+echo "Server name,Kernel version"; for i in "192.168.1.100" "centos9" "centos8-server" ; do ./lab1.sh -s $i; done
+echo "Server name,Kernel version"; for i in "192.168.1.100" "centos9" "centos8-server" ; do ./lab1.sh -s $i; done > report_kernelVersions.csv
+echo "Server name,Kernel version" > report_kernelVersions.csv; for i in "192.168.1.100" "centos9" "centos8-server" ; do ./lab1.sh -s $i; done >> report_kernelVersions.csv
+less report_kernelVersions.csv 
+test
+echo $?
+l1=10
+l2=12\
+l2=12
+test l1 -eq l2
+[ l1 -eq l2 ]
+test $l1 -eq $l2
+echo $?
+test $l1 -eq 10
+echo $?
+test $l1 -lt $l2
+echo $?
+test $l1 -gt $l2
+echo $?
+[ $l1 -eq 10 ] 
+[$l1 -eq 10] 
+[ $l1 -eq 10 ] 
+echo $?
+[[ $l1 -eq 10 ]]
+echo $?
+t1="cos"
+t2="niecos"
+[[ $t1 = $t2 ]]
+echo $?
+t2="cos"
+[[ $t1 = $t2 ]]
+echo $?
+[[ -z $t1 ]]
+echo $?
+[[ -z $t3 ]]
+echo $?
+ehco $SSH_TTY
+echo $SSH_TTY
+ls -la `echo $SSH_TTY`
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup3
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup4
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup4
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup4
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+cat backup.sh |wc -l
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup5
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup5
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup5
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup5
+vi cwiczenie3.sh
+chmod +x cwiczenie3.sh 
+./cwiczenie3.sh /home/student/myfile.log
+./cwiczenie3.sh /home/student/myfile
+vi cwiczenie3.sh
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup6
+vi backup.sh 
+./backup.sh -f /home/student/myfile.log -s /tmp/ -d /home/student/backup6
+git status
+git add .
+git commit -m "Adding day 1 files"
+git push
+vi day1-history.txt 
+history | awk '$1 > 209' | cut -c 8-
+history | awk '$1 > 209' | cut -c 8-|wc -l
+cat day1-history.txt |wc-l
+cat day1-history.txt |wc -l
+history | awk '$1 > 209' | cut -c 8- > day1-history.txt 
