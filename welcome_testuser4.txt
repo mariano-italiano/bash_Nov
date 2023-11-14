@@ -1,0 +1,7 @@
+Witam, konto na serwerze o adresie IP: 192.168.1.90/24 zostało utworzone. Dane do logowania:
+
+Login: testuser4
+Hasło: Student123!
+Przy pierwszym logowaniu zmień hasło.
+
+Pozdrawiam, Administrator

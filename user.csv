@@ -1,0 +1,7 @@
+username,password,shell,gekos
+testuser1,Student123!,/bin/bash,NO:12345
+testuser2,,/bin/bash,NO:45647457
+testuser3,Student123!,,
+testuser4,Student123!,/bin/sh,NO:142312
+testuser5,Student123!,/bin/sh,
+,Student123!,/bin/bash,NO:asdasd

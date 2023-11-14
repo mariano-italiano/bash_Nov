@@ -1,0 +1,299 @@
+bc
+a=5
+b=2
+"scale=5; $5+$2" | bc
+"scale=5; $5 + $2" | bc
+echo "scale=5; $5 + $2" | bc
+echo "scale=5; $5+$2" | bc
+echo "scale=5; $a+$b" | bc
+a=13
+echo "scale=5; $a+$b" | bc
+echo "scale=5; $a/$b" | bc
+echo "scale=2; $a/$b" | bc
+echo $(($a+$b))
+man bc
+vi lab2.sh
+chmod +x lab2.sh
+./lab2.sh 
+vi lab2.sh
+./lab2.sh 
+vi lab2.sh
+./lab2.sh 
+echo "scale=2; $a+0 | bc
+echo "scale=2; $a+0" | bc
+a=13.123455
+echo "scale=2; $a+0" | bc
+echo "scale=2; $a" | bc
+vi lab2.sh 
+./lab2.sh 
+vi lab2.sh 
+./lab2.sh 
+vi lab2.sh 
+./lab2.sh 
+vi lab2.sh 
+./lab2.sh 
+for i in 1 2 3 ; do echo $i; done
+for i in 1 2 3 cztery ; do echo $i; done
+ls
+for i in $(ls); do echo plik: $i; done
+for i in $(ls /usr/bin | grep -i su); do echo plik binarny: $i; done
+for i in $(ls /usr/bin | grep -i ^su); do echo plik binarny zaczynający sie na su*: $i; done
+seq 1 10
+seq 1 4
+seq 1 2 10
+seq 1 15 100
+seq 1..10..2
+seq 1..10
+seq 1 10 2
+echo $(seq 1..10..2)
+for i in $(seq 1..10..2) ; do echo $i; done
+seq 1..2..10
+man sqe
+man sqeq
+man seq
+seq 10
+seq 2 10
+seq 2 4 10
+for i in one "to jest dwa" "trzy teraz" ; do echo $i; done
+osoby=("Anna K." "Mateusz Z.")
+NUMBERS=(1 2 3 "teraz cztery" piec)
+for i in "${osoby[@]}"; do echo $i; done
+for i in "${NUMBERS[@]}"; do echo $i; done
+for i in "${osoby[@]}"; do for j in "${NUMBERS[@]}"; do echo "petla osoby, el $i"; echo "petla numbers, el $j";done ; done
+NUMBERS=(1 2 3 "Anna K.")
+for i in "${osoby[@]}"; do for j in "${NUMBERS[@]}"; do if [[ $i == $j ]]; then echo "Mamy match: $i"  ;done ; done
+for i in "${osoby[@]}"; do for j in "${NUMBERS[@]}"; do if [[ $i == $j ]]; then ;echo "Mamy match: $i"  ;done ; done
+for i in "${osoby[@]}"; do for j in "${NUMBERS[@]}"; do if [[ $i == $j ]]; then echo "Mamy match: $i" fi  ;done ; done
+for i in "${osoby[@]}"; do for j in "${NUMBERS[@]}"; do if [[ $i == $j ]]; then echo "Mamy match: $i" ; fi  ;done ; done
+NUMBERS=(1 2 3 "Anna K." "Mateusz Z.")
+for i in "${osoby[@]}"; do for j in "${NUMBERS[@]}"; do if [[ $i == $j ]]; then echo "Mamy match: $i" ; fi  ;done ; done
+vi for_example.sh
+chmod +x for_example.sh
+./for_example.sh
+vi for_example.sh
+./for_example.sh
+ls -la
+vi for_example2.sh 
+chmod +x for_example*
+./for_example2.sh 
+vi for_example2.sh 
+./for_example2.sh 
+ls -la
+echo {1..10..2}
+echo seq 1 2 10
+seq 1 2 10
+{1..10..2}
+vi for_example2.sh 
+vi for_example.sh 
+./for_example.sh
+vi for_example.sh 
+./for_example.sh
+vi for_example.sh 
+./for_example.sh
+vi for_example.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+vi backup.sh 
+./backup.sh 
+./backup.sh -f ~/day2.log -s /usr/bin -d /tmp/bakcup_folder
+vi backup.sh 
+./backup.sh -f ~/day2.log -s /usr/bin -d /tmp/bakcup_folder
+less /day2.log
+less ~/day2.log
+ls -la /usr/bin/sudo
+ls -la /usr/bin/sudoreplay 
+vi backup.sh 
+find /usr/share/ -perm /u-r
+
+find /usr/share/ ! -perm -u=r
+find /usr/bin/ ! -perm -u=r
+find /usr/bin/ -perm -u=r
+find /usr/bin/ ! -perm -u=r
+man find
+find /usr/bin/ -perm -u+r
+find /usr/bin/ -perm -u-r
+find /usr/bin/ ! -perm -u+r
+vi backup
+vi backup.sh 
+./backup.sh -f ~/day2.log -s /usr/bin -d /tmp/bakcup_folder
+vi backup.sh 
+./backup.sh -f ~/day2.log -s /usr/bin -d /tmp/bakcup_folder
+ls -la ../missing_permisions.txt 
+less ../missing_permisions.txt
+vi for_example2.sh 
+vi for_example.sh 
+./for_example
+./for_example.sh 
+vi for_example.sh 
+./for_example.sh 
+vi for_example.sh 
+./for_example.sh 
+vi backup.sh 
+less ../missing_permisions.txt
+vi backup.sh 
+less ../missing_permisions.txt
+vi backup.sh 
+./backup.sh -f ~/day2.log -s /usr/bin -d /tmp/bakcup_folder
+less ../missing_permisions.txt
+vi backup.sh 
+./backup.sh -f ~/day2.log -s /usr/bin -d /tmp/bakcup_folder
+less ../missing_permisions.txt
+vi backup.sh 
+rm ../missing_permisions.txt 
+./backup.sh -f ~/day2.log -s /usr/bin -d /tmp/bakcup_folder
+less ../missing_permisions.txt
+less ../mi
+vi backup.sh 
+./backup.sh -f ~/for.log -s /usr/bin -d /tmp/test123
+less ../for.log 
+vi backup.sh 
+less ../for.log 
+vi backup.sh 
+find /usr/bin ! -perm -u+r
+vi backup.sh 
+./backup.sh -f ~/for.log -s /usr/bin -d /tmp/test123
+vi backup.sh 
+./backup.sh -f ~/for.log -s /usr/bin -d /tmp/test123
+vi backup.sh 
+./backup.sh -f ~/for.log -s /usr/bin -d /tmp/test123
+vi backup.sh 
+less ../missing_permisions.txt 
+vi backup.sh 
+rm ../missing_permisions.txt 
+./backup.sh -f ~/for.log -s /usr/bin -d /tmp/test123
+less ../missing_permisions.txt 
+vi backup.sh 
+less ../day2.log 
+less ../for.log 
+vi backup.sh 
+./backup.sh -f ~/for.log -s /usr/bin -d /tmp/test124
+less ../for.log 
+cat ~/for.log 
+cat ~/for.log | cut -d "'" -f 2
+vi backup.sh 
+./backup.sh -f ~/for2.log -s /usr/bin -d /tmp/test111
+less ../for2.log 
+less ../missing_permisions.txt 
+rm ../missing_permisions.txt 
+./backup.sh -f ~/for3.log -s /usr/bin -d /tmp/test222
+less ../missing_permisions.txt 
+vi backup.sh 
+vi for_example.sh 
+for i in seq 1 2 15; do echo $i; done
+for i in $(seq 1 2 15); do echo $i; done
+vi while.sh
+chmod +x while.sh 
+./while.sh 
+vi while.sh
+./while.sh 
+vi while.sh
+./while.sh 
+vi while.sh
+./while.sh 
+vi while.sh
+vu until.sh
+vi until.sh
+chmod +x until.sh 
+./until.sh 
+vi until.sh
+vi servers.txt
+vi ping_check.sh
+chmod +x ping_check.sh
+./ping_check.sh 
+vi ping_check.sh
+./ping_check.sh 
+vi ping_check.sh
+./ping_check.sh 
+man ping
+vi ping_check.sh
+man ping
+./ping_check.sh 
+vi backup.sh 
+./backup.sh -f ~/while.log -s /usr/bin -d /tmp/test_while
+vi backup.sh 
+./backup.sh -f ~/while.log -s /usr/bin -d /tmp/test_while2
+vi backup.sh 
+./backup.sh -f ~/while.log -s /usr/bin -d /tmp/test_while2
+ls -la /tmp/
+ls -lah /tmp/
+vi backup.sh 
+./backup.sh -f ~/while.log -s /usr/bin -d /tmp/test_while2
+vi sprawdz.sh
+./
+chmod +x sprawdz.sh 
+./sprawdz.sh /tmp
+vi sprawdz.sh
+ip a | grep inet | grep ens | awk '{print $2}'
+vi lab3.sh
+vi user.csv
+chmod +x lab3.sh 
+./lab3.sh 
+./lab3.sh -f user.csv
+vi lab3.sh
+sudo ./lab3.sh -f user.csv 
+vi user.csv 
+vi lab3.sh
+cat /etc/passwd
+userdel -r testuser1
+sudo userdel -r testuser1
+sudo userdel -r testuser2
+sudo userdel -r testuser3
+sudo userdel -r testuser4
+sudo userdel -r testuser5
+sudo ./lab3.sh -f user.csv 
+cat welcome_*
+cat welcome_testuser1
+cat welcome_testuser1.txt 
+cat welcome_testuser2.txt 
+cat welcome_testuser3.txt 
+cat welcome_testuser4.txt 
+kill -l
+vi sygnaly.sh
+chmod +x sygnaly.sh
+./sygnaly.sh &
+./sygnaly.sh
+vi backup.sh 
+./backup.sh -f ~/trap.log -s /usr/bin -d /tmp/test-trap
+vi backup.sh 
+./backup.sh -f ~/trap.log -s /usr/bin -d /tmp/test-trap
+less ~/trap.log
+ls -la /tmp
+vi backup.sh 
+rm /tmp/test*
+rm /tmp/test* -rf
+sudo rm /tmp/test* -rf
+ls -la /tmp
+./backup.sh -f ~/trap.log -s /usr/bin -d /tmp/test-trap
+vi backup.sh 
+who
+who | uniq 
+who | awk '{print $1}'
+who | awk '{print $1}'| uniq
+who | grep -i root | wc -l
+who
+who | grep -i root | wc -l
+vi lab4.sh
+who |awk '{print $1}'| uniq| wc -l
+who
+vi lab4.sh
+who | awk '{print $1}'| grep -i root | uniq | wc -l
+vi lab4.sh
+chmod +x lab4.sh
+./lab4.sh 
+./lab4.sh -f users.statistics
+vi lab4.sh 
+vi day1-history.txt 
+history
+history | awk '$1 > 659' | cut -c 8- > day2-history.txt 
