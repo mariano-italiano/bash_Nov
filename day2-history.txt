@@ -297,3 +297,199 @@ vi lab4.sh
 vi day1-history.txt 
 history
 history | awk '$1 > 659' | cut -c 8- > day2-history.txt 
+git status
+git add .
+git commit -m "Adding day2 files and scripts"
+git push
+cp -rp /tmp/bash_Sep/r06-petle/ .
+cp -rp /tmp/bash_Sep/r07-sygnaly/ .
+cp -rp /tmp/bash_Sep/r09-awk/ .
+cp -rp /tmp/bash_Sep/r11-debug/ .
+git add .
+git commit -m "Adding day2 files and scripts"
+git push
+logger --help
+logger -p local0.warning "test log"
+tail -f /var/log/messages
+sudo tail -f /var/log/messages
+vi tekst.txt
+grep tutaj tekst.txt
+alias
+grep tutaj tekst.txt
+grep test tekst.txt 
+cat tekst.txt
+grep -i test tekst.txt 
+cat /etc/ssh/sshd_config
+sudo cat /etc/ssh/sshd_config
+sudo vi /etc/ssh/sshd_config
+sudo grep -v "#" /etc/ssh/sshd_config
+sudo less /var/log/messages
+logger "moj testowy log do sysloga"
+sudo less /var/log/messages
+sudo grep "test log" -A 2 -B 5 /var/log/messages
+sudo cat /var/log/messages | wc -l 
+sudo grep error -i /var/log/messages
+sudo grep error -i /var/log/messages | wc -l
+journalctl -p err
+sudo journalctl -p err
+sudo grep error -i /var/log/messages
+sudo grep -v "#" /etc/ssh/sshd_config
+sudo grep -v "#" /etc/ssh/sshd_config -n
+grep -i test tekst.txt -n
+grep test tekst.txt -in
+grep test tekst.txt -inc
+grep test tekst.txt -c
+grep test tekst.txt -ic
+grep test tekst.txt -in
+grep test tekst.txt -ic
+grep student /etc/passwd
+grep testuser /etc/passwd
+grep testuser /etc/passwd -c
+grep testuser /etc/passwd -n
+grep testuser /etc/passwd -in
+cat tekst.txt 
+grep "^a na" tekst.txt 
+grep ^a na tekst.txt 
+grep ^a tekst.txt 
+grep a.* tekst.txt 
+grep a* tekst.txt 
+sudo vi /var/log/messages
+cat tekst.txt 
+sed 'p' tekst.txt
+sed -n 'p' tekst.txt
+sed ==help
+sed --help
+sed -n '1,3p' tekst.txt
+sed '1,3p' tekst.txt
+sed -n '1,3p' tekst.txt
+sed -n ',5p' tekst.txt
+sed -n '5p' tekst.txt
+sed 's/wzorzec/nowywzorzec/opcje' plik 
+sed 's/Test/test/' tekst.txt 
+sed 's/Test/test/g' tekst.txt 
+sed 's/Test/test/I' tekst.txt 
+sed 's/Test/test/gI' tekst.txt 
+sed 's/test/test2/gI' tekst.txt 
+vi tekst.txt 
+cat tekst.txt
+sed 's//bin/bash/powłoka bash/' tekst.txt 
+sed 's$/bin/bash$powłoka bash$gI' tekst.txt 
+sed 's|/bin/bash|powłoka bash|gI' tekst.txt 
+sed 's/\b[0-9]\{3\}\b/liczba/' tekst.txt 
+sed 's/\b[0-9]\{3\}\b/number &/' tekst.txt 
+sed 's/\b[0-9]\{3\}\b/[&]/' tekst.txt 
+sed 's/^a tu/a tutaj/' tekst.txt 
+vi tekst.txt 
+sed 's/^a tu/a tutaj/' tekst.txt 
+sed 's/a tu/a tutaj/' tekst.txt 
+vi tekst.txt 
+sed -i 's/a tu/a tutaj/' tekst.txt 
+vi ktes
+vi tekst.txt 
+sed 's/a tu/a tutaj/' tekst.txt 
+sed 's/\b[0-9]\{3\}\b$/koniec lini/' tekst.txt 
+vi tekst.txt 
+sed 's/\b[0-9]\{3\}\b$/koniec lini/' tekst.txt 
+sed 's/cos/koniec lini/' tekst.txt 
+sed 's/\b[a-z]\{4\}\b/czterolitreowiec/' tekst.txt 
+history
+cat tekst.txt 
+sed 'd' tekst.txt 
+sed '2d' tekst.txt 
+sed '3,5d' tekst.txt 
+sed '3,$d' tekst.txt 
+cat tekst.txt 
+cat tekst.txt |grep -n
+cat tekst.txt |grep " " -n
+sed '2i\nowa linia sedowa' tekst.txt 
+cat tekst.txt |grep " " -n
+sed -i '2i\nowa linia sedowa' tekst.txt 
+cat tekst.txt |grep " " -n
+sed -i '2a\nowa linia sedowa nr2' tekst.txt 
+cat tekst.txt |grep " " -n
+sed '2c\nowa linia sedowa nr1' tekst.txt 
+sed '2c\nowa linia sedowa nr1' tekst.txt -i
+cat tekst.txt |grep " " -n
+sed 's/nowa linia sedowa nr1/nowa linia sedowa/' tekst.txt 
+cat tekst.txt | grep -e linia -e znak -e cos
+sed -e 's/linia/linijka/gI; s/^a tu/a tutaj/; s/znak/znaczek/; s/\b[0-9]\{3\}\b/numereczek/' tekst.txt 
+which awk
+ls -la /usr/bin/awk
+awk '{ print "Hello world!" }
+awk '{ print "Hello world!" }'
+awk 'BEGIN { print "Hello world!" }'
+awk '{ print }' tekst.txt 
+awk '{ print $0 }' tekst.txt 
+awk '{ print $1 }' tekst.txt 
+awk -F"," '{ print $1 }' tekst.txt 
+awk 'BEGIN { FS=":" } { print $1 } END { print NR }' tekst.txt 
+awk 'BEGIN { FS=":" } { print "User " NR, "to " $1 } END { print "\nUżytkowników łącznie: " NR }' /etc/passwd
+less /etc/passwd
+awk 'END { print "\nUżytkowników łącznie: " NR }' /etc/passwd
+awk ' NR < 6 ' /etc/passwd
+awk '/bash$/' /etc/passwd
+awk '/^test/' /etc/passwd
+vi awk-data
+cat awk-data
+mv awk-data dane
+awk 'BEGIN{FS="\n"; RS=""} {print $1,$3}' dane
+awk 'BEGIN{FS="\n"; RS=""; OFS=","} {print $1,$3}' dane
+awk 'BEGIN{FS="\n"; RS=""; OFS=","; ORS=""} {print $1,$3}' dane
+awk 'BEGIN{FS="\n"; RS=""; OFS=","; ORS="\n"} {print $1,$3}' dane
+awk 'BEGIN{FS="\n"; RS=""; OFS=","; ORS="\n\n"} {print $1,$3}' dane
+awk 'BEGIN{FS="\n"; RS=""; OFS=","; ORS="\t"} {print $1,$3}' dane
+awk 'BEGIN{FS="\n"; RS=""; OFS=","} {print $1,$3}' dane
+awk 'BEGIN{FS="\n"} {print $1, "FNR="FNR,"NR="NR }' {print $1,$3}' dane
+awk 'BEGIN{FS="\n"} {print $1, "FNR="FNR,"NR="NR }' dane
+awk 'BEGIN{FS="\n"} {print $1, "FNR="FNR,"NR="NR }' dane dane 
+awk 'BEGIN{FS="\n"} {print $1, "FNR="FNR,"NR="NR }' dane /etc/passwd
+first.awk
+vi first.awk
+awk -f first.awk
+vi first.awk
+awk -f first.awk
+vi first.awk
+awk -f first.awk
+vi first.awk
+awk -f first.awk
+vi first.awk
+awk -f first.awk
+vi first.awk
+awk -F":" '{if ($3 > 200 && $3 < 1000) print $1}' /etc/passwd
+vi /etc/login.defs 
+cat /etc/passwd
+awk -F":" '{if ($3 > 200 && $3 < 1000) print $1}' /etc/passwd
+awk -F":" '{if ($3 >= 1000) print $1}' /etc/passwd
+awk 'BEGIN {FS=":"; printf "System Users:\n----------------\n"} {if ($3 > 200 && $3 < 1000) print $1}' /etc/passwd
+awk 'BEGIN { FS=":" } { printf "%20s %5d %17s\n",$1,$3,$7 } ' /etc/passwd
+awk 'BEGIN {FS=":"; printf "%20s %5s %17s\n","Name","UID","Shell"} { printf "%20s %5d %17s\n",$1,$3,$7 }' /etc/passwd
+awk 'function zielonyNaglowek(s) { printf "\033[1;32m" s "\033[0m\n" } > BEGIN {FS=":"; zielonyNaglowek(" Name UID Shell ") } > { printf "%20s %5d %17s\n",$1,$3,$7 }' /etc/passwd
+awk 'function zielonyNaglowek(s) { printf "\033[1;32m" s "\033[0m\n" } BEGIN {FS=":"; zielonyNaglowek(" Name UID Shell ") } { printf "%20s %5d %17s\n",$1,$3,$7 }' /etc/passwd
+awk 'function zielonyNaglowek(s) { printf "\033[1;32m" s "\033[0m\n" } BEGIN {FS=":"; zielonyNaglowek("                Name UID Shell ") } { printf "%20s %5d %17s\n",$1,$3,$7 }' /etc/passwd
+awk 'function zielonyNaglowek(s) { printf "\033[1;32m" s "\033[0m\n" } BEGIN {FS=":"; zielonyNaglowek("                Name   UID       Shell ") } { printf "%20s %5d %17s\n",$1,$3,$7 }' /etc/passwd
+awk 'function zielonyNaglowek(s) { printf "\033[1;32m" s "\033[0m\n" } BEGIN {FS=":"; zielonyNaglowek("                Name   UID             Shell ") } { printf "%20s %5d %17s\n",$1,$3,$7 }' /etc/passwd
+awk --help
+vi passwd.awk
+awk -f passwd.awk
+awk -f passwd.awk /etc/passwd
+vi lab5.sh
+vi lab5.awk
+vi wina
+awk -f lab5.awk wina 
+vi lab5.awk 
+ls -la
+vi cwiczenie3.sh 
+vi backup.sh 
+bash -v backup.sh -f ~/final.log -s /usr/bin -d /tmp/final-backup
+bash -x backup.sh -f ~/final.log -s /usr/bin -d /tmp/final-backup
+vi backup.sh 
+bash -x backup.sh -f ~/final.log -s /usr/bin -d /tmp/final-backup
+./backup.sh -f ~/final.log -s /usr/bin -d /tmp/final-backup
+logger "data - INFO - moj log"
+sudo tail -f /var/log/messages
+git status
+git add .
+git commit -m "Adding files"
+git push
+vi day2-history.txt 
+history | awk '$1 > 659' | cut -c 8- > day2-history.txt
