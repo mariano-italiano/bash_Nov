@@ -1,0 +1,9 @@
+To Jest Plik Testowy Inaczej TestPlik 
+nowa linia sedowa nr1
+nowa linia sedowa nr2
+# tutaj jest komentarz 123
+# i tutaj też 
+a tu będzie jakiś znak specjalny 100 w srodku 
+a na końcu zmienna $PATH 456
+koniec testowego pliku tutaj
+powłoka /bin/bash a tutaj jeszcze cos

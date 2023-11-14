@@ -79,6 +79,7 @@ function init {
 }
 
 function cleanup { 
+	set -x
 	CTRLC=$(( $CTRLC + 1 )) 
 	echo 
 	if [[ $CTRLC = 1 ]] ; then 
@@ -98,6 +99,7 @@ function cleanup {
 			CTRLC=0 
 		fi 
 	fi 
+	set +x
 }
 
 trap cleanup SIGINT
