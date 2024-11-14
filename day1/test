@@ -1,0 +1,5 @@
+test user $USER
+	tabulacja tutaj
+zmienna home ma wartość $HOME
+
+koniec
