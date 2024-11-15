@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash  
 
 # Autor: Marcin Kujawski
 # Version: 1.0
@@ -13,6 +13,24 @@ do
 		d) BACKUP_DST=${OPTARG};;	
 	esac
 done
+
+CTRLC=0
+
+function przechwyc_SIGINT {
+        CTRLC=$(( $CTRLC + 1 ))
+        echo
+        if [[ $CTRLC = 1 ]] ; then
+		read -p "Wcisnąłeś Ctrl+C, czy chcesz zakonczyć działanie programu? [y/n]: " WYJSCIE
+		if [ $WYJSCIE = 'y' ] ; then
+			exit 0
+		else
+			CTRLC=0
+		fi
+	
+	fi
+}
+
+trap przechwyc_SIGINT SIGINT
 
 if [ $# -eq 6 ] ; then
 
@@ -50,12 +68,14 @@ if [ $# -eq 6 ] ; then
 		#3	RCT1="SKIPPED"
 		#fi
 	else
+		
 		echo "Tworzenie katalogu $BACKUP_DST" && mkdir $BACKUP_DST 2>/dev/null
  	        if [ $? -eq 0 ]; then
         		RCT1="SUCCESS"
                 else
                         RCT1="FAILED"
                 fi
+	 
 
 	fi
 
@@ -67,6 +87,7 @@ if [ $# -eq 6 ] ; then
 		#echo
 		RCT2="SUCCESS"
 
+		set -x
 		COMPRESS=""
 		while [ -z $COMPRESS ] ; do
 			read -p "Czy dokonać kompresji $BACKUP_DST ? [y/n]: " ODP
@@ -88,6 +109,7 @@ if [ $# -eq 6 ] ; then
 				echo "Podałeś złą odpowiedź, musi być [y/n]!"
 			fi
 		done
+		set +x
 
 		SCRIPT_COUNT=0
 		for plik in $(ls $BACKUP_DST)

@@ -1,0 +1,4 @@
+username,password,shell,gekos
+student1,student1,/bin/bash,Test User Student1
+student2,student2,/bin/bash,Test User Student2
+student3,student3,/bin/sh,Test User Student3
